@@ -15,7 +15,7 @@ source:
 build:
   skip: true  # [not linux]
   # 2to3 is used meaning it isn't a noarch package
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
@@ -33,7 +33,7 @@ test:
     - python -m libaio.test
 
 about:
-  home: http://github.com/simplejson/simplejson
+  home: https://github.com/vpelletier/python-libaio
   license: LGPL-3.0
   license_family: LGPL
   license_file: COPYING.LESSER
