@@ -1,5 +1,5 @@
 {% set name = "libaio" %}
-{% set version = "0.6" %}
+{% set version = "0.7" %}
 
 package:
   name: python-{{ name|lower }}
@@ -7,15 +7,13 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: d1d119cccc77cc7c6ed7c67fd170b02d9e6237f48a5ac5ade2a90f1450640501
-  patches:
-    - tests_Fragment_some_more.patch
+  sha256: 4cb08b79ebc882a8dc25150efbd56cd11c23ae3288ed643fcff35ea234df3189
 
 
 build:
-  skip: true  # [not linux]
-  # 2to3 is used meaning it isn't a noarch package
-  number: 1
+  # the python package is noarch, but requires an a linux only package.
+  noarch: python
+  number: 0
   script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:

@@ -1,7 +1,7 @@
 About python-libaio
 ===================
 
-Home: http://github.com/simplejson/simplejson
+Home: https://github.com/vpelletier/python-libaio
 
 Package license: LGPL-3.0
 
