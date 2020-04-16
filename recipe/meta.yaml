@@ -1,5 +1,5 @@
 {% set name = "libaio" %}
-{% set version = "0.7" %}
+{% set version = "0.8" %}
 
 package:
   name: python-{{ name|lower }}
@@ -7,14 +7,14 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 4cb08b79ebc882a8dc25150efbd56cd11c23ae3288ed643fcff35ea234df3189
+  sha256: 370f15fd2d3d86da59b4a5034d1f6bdfb710693586a0f7ac8f7c29a29400a738
 
 
 build:
   # the python package is noarch, but requires an a linux only package.
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -35,7 +35,7 @@ about:
   license: LGPL-3.0
   license_family: LGPL
   license_file: COPYING.LESSER
-  summary: 'Python wrapper for libaio'
+  summary: Python wrapper for libaio
   description: |
     Linux AIO API wrapper
 
