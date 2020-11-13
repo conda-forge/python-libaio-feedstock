@@ -5,7 +5,7 @@ Home: https://github.com/vpelletier/python-libaio
 
 Package license: LGPL-3.0
 
-Feedstock license: BSD 3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/python-libaio-feedstock/blob/master/LICENSE.txt)
 
 Summary: Python wrapper for libaio
 
