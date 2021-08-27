@@ -1,5 +1,5 @@
 {% set name = "libaio" %}
-{% set version = "0.8.2" %}
+{% set version = "0.8.3" %}
 
 package:
   name: python-{{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 69dca40e27a8815925d98144c1620798f071740a260e24de53f7a358b6ae9d2d
+  sha256: a2ba7844ad1a4d32a947fb960c539779332bbe630019c246182d03f72c3d275b
 
 
 build:
