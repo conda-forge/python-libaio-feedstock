@@ -28,7 +28,7 @@ test:
   imports:
     - libaio
   commands:
-    - python -m libaio.test
+    - python -m libaio.test -vv
 
 about:
   home: https://github.com/vpelletier/python-libaio
