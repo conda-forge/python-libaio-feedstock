@@ -13,22 +13,22 @@ source:
 build:
   # the python package is noarch, but requires an a linux only package.
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python >=2.7
+    - python >=3.7
     - pip
   run:
-    - python >=2.7
+    - python >=3.7
     - libaio
 
 test:
   imports:
     - libaio
   commands:
-    - python -m libaio.test
+    - python -m libaio.test -vv
 
 about:
   home: https://github.com/vpelletier/python-libaio
