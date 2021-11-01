@@ -1,5 +1,5 @@
 {% set name = "libaio" %}
-{% set version = "0.8.3" %}
+{% set version = "0.9.1" %}
 
 package:
   name: python-{{ name|lower }}
@@ -7,13 +7,13 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: a2ba7844ad1a4d32a947fb960c539779332bbe630019c246182d03f72c3d275b
+  sha256: 9ee293a95ee56568b714922c2308878474b4ea9d05e7f4ba1e5e49873494b95d
 
 
 build:
   # the python package is noarch, but requires an a linux only package.
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
