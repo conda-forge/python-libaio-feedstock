@@ -6,25 +6,27 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 910bccf66ac3a43959e3f1fb7871541b292d583f939fa24c6d67f4ad759e8f05
 
 
 build:
   # the python package is noarch, but requires an a linux only package.
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - pip
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - libaio
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - libaio
   commands:
