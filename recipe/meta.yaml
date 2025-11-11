@@ -1,13 +1,13 @@
 {% set name = "libaio" %}
-{% set version = "0.9.3" %}
+{% set version = "0.9.4" %}
 
 package:
   name: python-{{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 910bccf66ac3a43959e3f1fb7871541b292d583f939fa24c6d67f4ad759e8f05
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: eebaf2356ffbd8dac9fa0e1931b32f53d4271a8be8416c06a201747a2f7cc2c3
 
 
 build:
