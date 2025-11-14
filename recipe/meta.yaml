@@ -7,8 +7,6 @@ package:
 source:
   url: https://pypi.org/packages/source/l/libaio/libaio-{{ version }}.tar.gz
   sha256: 5f674b21a63389308eaf76f5fa2227cadc63d739295dc75d295cfc55c521228a
-  patches:
-    - fix_error_handling_for_missing_so_file.patch
 
 build:
   # the python package is noarch, but requires an a linux only package.
